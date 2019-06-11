@@ -1,0 +1,58 @@
+<%- contentFor('body') %>
+<h1>Personagens</h1>
+<div class="card-columns">
+
+<% characters.result.forEach( function(item){ %>
+  
+    <div class="card" style="width: 18rem;">
+      <img src="<%= item.image %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= item.name %></h5>
+        
+        <table class="table table-hover">
+          <tbody>
+                 <tr>
+                   <td>Visto por ultimo em</td>
+                   <td><%= item.location.name%></td>
+                 </tr>
+                 <tr>
+                   <td>Gênero</td>
+                   <td><%=item.gender%></td>
+                 </tr>
+                 <tr>
+                   <td>Aparições na 1ª temporada</td>
+                   <td>11</td>
+                 </tr>
+                 <tr>
+                       <td>Aparições na 2ª temporada</td>
+                       <td>10</td>
+                   </tr>
+                   <tr>
+                           <td>Aparições na 3ª temporada</td>
+                           <td>10</td>
+                   </tr>
+                   <tr>
+                           <td>Aparições no total</td>
+                           <td><%= item.episode.length%></td>
+                   </tr>
+                   <tr>
+                           <td>Status</td>
+                           <td><%= item.status %></td>
+                   </tr>
+         
+               </tbody>
+             </table>
+        
+      </div>
+    </div>
+    
+  <% }); %> 
+</div> 
+
+
+
+
+
+
+
+
